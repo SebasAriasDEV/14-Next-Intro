@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 type Beer = Record<string, any>;
@@ -21,15 +22,9 @@ export default async function Page({ params }: Props) {
     <main>
       <h1 className='font-bold text-2xl'>{beer.name}</h1>
       <hr className='my-4' />
-      <div className='flex'>
-        <img className=' p-10 max-w-md max-h-56' src={beer.image_url} alt='' />
-        <div>
-          <h3 className='italic mb-2 text-end text-slate-600'>
-            "{beer.tagline}"
-          </h3>
-          <p>{beer.description}</p>
-        </div>
-      </div>
+
+      <h3 className='italic mb-2 text-end text-slate-600'>{beer.tagline}</h3>
+      <p className='mb-5'>{beer.description}</p>
 
       <Link
         href='/beers'

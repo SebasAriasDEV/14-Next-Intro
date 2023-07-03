@@ -18,7 +18,9 @@ export default async function Page() {
       <hr className='my-4' />
       <div className='flex flex-col'>
         {beers.map((beer) => (
-          <Link href={`/beers/${beer.id}`}>{beer.name}</Link>
+          <Link key={beer.id} href={`/beers/${beer.id}`}>
+            {beer.name}
+          </Link>
         ))}
       </div>
     </main>
