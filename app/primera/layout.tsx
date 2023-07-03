@@ -7,7 +7,7 @@ export default function PrimeraLayout({ children }: Props) {
     <>
       <div>
         {children}
-        <aside className='bg-blue-100'>Layout de Primera </aside>
+        <aside className='bg-blue-100 p-3'>Layout de Primera </aside>
       </div>
     </>
   );
