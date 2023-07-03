@@ -24,7 +24,7 @@ export default async function Page({ params }: Props) {
       <hr className='my-4' />
 
       <h3 className='italic mb-2 text-end text-slate-600'>{beer.tagline}</h3>
-      <p className='mb-5'>{beer.description}</p>
+      <p className='mb-5 text-justify'>{beer.description}</p>
 
       <Link
         href='/beers'
