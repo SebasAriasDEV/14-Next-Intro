@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 type Beer = Record<string, any>;
@@ -34,4 +33,12 @@ export default async function Page({ params }: Props) {
       </Link>
     </main>
   );
+}
+
+export async function generateStaticParams() {
+  const params = [];
+  for (let i = 1; i <= 10; i++) {
+    params.push({ beerId: i.toString() });
+  }
+  return params;
 }
