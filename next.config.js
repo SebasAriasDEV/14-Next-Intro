@@ -5,6 +5,16 @@ const nextConfig = {
   experimental: {
     mdxRs: true, // <-- add this option
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.punkapi.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 module.exports = withMDX(nextConfig);
